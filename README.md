@@ -45,7 +45,7 @@ Each session card has four actions:
 |--------|--------|
 | ✏️ Pencil | Edit session name and tabs |
 | ↗️ Restore | Reopen all saved tabs |
-| ✕ X | Close open tabs matching this session |
+| X | Close open tabs matching this session |
 | 🗑️ Trash | Delete the session permanently |
 
 ---

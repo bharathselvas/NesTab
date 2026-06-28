@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="icons/icon128.png" width="100" height="100" alt="NesTAb Logo" />
+<img src="icons/icon48.png" width="100" height="100" alt="NesTAb Logo" />
 
 # NesTAb
 

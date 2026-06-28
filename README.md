@@ -45,10 +45,6 @@ NesTAb fixes that. Save your tabs into named sessions, close them guilt-free, an
 
 ---
 
-## Demo
-
-> Record a GIF using [ScreenToGif](https://www.screentogif.com/) and replace `demo.gif` above
-
 ---
 
 ## Install
@@ -92,11 +88,6 @@ Click **Close All Tabs** to clear your window instantly and see how much memory 
 ## Screenshots
 
 <div align="center">
-
-<!-- Add your screenshots here -->
-| Save Session | Manage Sessions |
-|---|---|
-| ![Save](screenshots/save.png) | ![Manage](screenshots/manage.png) |
 
 </div>
 

@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  max-height: 560px;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  background: #1e1e1e;
+  color: #cccccc;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  max-height: 560px;
+  padding: 12px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ---- Header ---- */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 9px 14px;
+  background: #007acc;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0098ff;
+}
+
+.btn-primary:active {
+  background: #005999;
+}
+
+.btn-primary-sm {
+  padding: 7px 14px;
+  background: #007acc;
+  color: #fff;
+}
+
+.btn-primary-sm:hover {
+  background: #0098ff;
+}
+
+.btn-primary-sm:active {
+  background: #005999;
+}
+
+.btn-danger-full {
+  width: 100%;
+  padding: 9px 14px;
+  background: #c73e3e;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.btn-danger-full:hover {
+  background: #d44;
+}
+
+.btn-danger-full:active {
+  background: #b33;
+}
+
+.btn-secondary {
+  padding: 7px 14px;
+  background: #3c3c3c;
+  color: #cccccc;
+}
+
+.btn-secondary:hover {
+  background: #505050;
+}
+
+.btn-danger {
+  padding: 7px 14px;
+  background: #c73e3e;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #d44;
+}
+
+.btn .material-symbols-outlined,
+.btn-danger-full .material-symbols-outlined,
+.btn-primary .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* ---- Divider ---- */
+.divider {
+  height: 1px;
+  background: #3c3c3c;
+  margin: 8px 0;
+  flex-shrink: 0;
+}
+
+/* ---- Input ---- */
+.input {
+  width: 100%;
+  padding: 7px 10px;
+  background: #3c3c3c;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: #007acc;
+}
+
+.input::placeholder {
+  color: #666;
+}
+
+/* ---- Save Flow ---- */
+#saveFlow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+#saveNameStep {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.save-name-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+#saveChecklistStep {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.save-checklist-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+/* ---- Checklist ---- */
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.checklist::-webkit-scrollbar {
+  width: 4px;
+}
+
+.checklist::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.checklist::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 2px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.check-item:hover {
+  background: #2a2d2e;
+}
+
+.check-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #007acc;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.check-item .favicon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.check-item .item-title {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- Session List ---- */
+.session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.session-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.session-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.session-list::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 2px;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #555;
+  font-size: 13px;
+  padding: 24px 0;
+}
+
+/* ---- Session Card ---- */
+.session-card {
+  background: #252526;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  transition: border-color 0.15s;
+}
+
+.session-card:hover {
+  border-color: #007acc;
+}
+
+.session-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 10px;
+}
+
+.session-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.session-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session-meta {
+  font-size: 11px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.session-meta .dot {
+  color: #555;
+}
+
+.session-favicons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.session-favicons .favicon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.session-favicons .more-text {
+  font-size: 10px;
+  color: #858585;
+  margin-left: 1px;
+}
+
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #858585;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.icon-btn:hover {
+  background: #2a2d2e;
+  color: #e0e0e0;
+}
+
+.icon-btn .material-symbols-outlined {
+  font-size: 17px;
+}
+
+.icon-btn.danger:hover {
+  background: #3a1a1a;
+  color: #f44747;
+}
+
+/* ---- Edit Panel ---- */
+.edit-panel {
+  border-top: 1px solid #3c3c3c;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-panel .input {
+  width: 100%;
+}
+
+.edit-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.edit-checklist::-webkit-scrollbar {
+  width: 4px;
+}
+
+.edit-checklist::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.edit-checklist::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 2px;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+/* ---- Toast ---- */
+.toast {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  padding: 9px 14px;
+  background: #252526;
+  border: 1px solid #3c3c3c;
+  border-radius: 6px;
+  color: #4ec9b0;
+  font-size: 12px;
+  text-align: center;
+  z-index: 200;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  animation: toastIn 0.2s ease;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.toast.hidden {
+  display: none;
+}
+
+/* ---- Modal ---- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-dialog {
+  background: #252526;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+  padding: 20px 24px;
+  width: 270px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.modal-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 4px;
+}
+
+.modal-name {
+  font-size: 12px;
+  color: #858585;
+  margin-bottom: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ---- Material Icons ---- */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+  vertical-align: middle;
+  line-height: 1;
+}

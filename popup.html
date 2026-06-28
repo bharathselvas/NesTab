@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NesTAb</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz@20..48">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <div class="header">
+      <h1><span style="color:#007acc">Nes</span><span style="color:#ffffff">TAb</span></h1>
+    </div>
+
+    <!-- Global buttons -->
+    <button id="closeAllBtn" class="btn btn-danger-full">
+      <span class="material-symbols-outlined">power_settings_new</span>
+      Close All Tabs
+    </button>
+
+    <button id="saveBtn" class="btn btn-primary">
+      <span class="material-symbols-outlined">save</span>
+      Save Session
+    </button>
+
+    <!-- Inline save flow -->
+    <div id="saveFlow" class="hidden">
+      <div id="saveNameStep">
+        <input id="saveNameInput" class="input" type="text" placeholder="Session name (optional)" maxlength="50" autocomplete="off">
+        <div class="save-name-actions">
+          <button id="saveNameCancelBtn" class="btn btn-secondary">Cancel</button>
+          <button id="saveNameConfirmBtn" class="btn btn-primary-sm">Save</button>
+        </div>
+      </div>
+      <div id="saveChecklistStep" class="hidden">
+        <div id="tabChecklist" class="checklist"></div>
+        <div class="save-checklist-actions">
+          <button id="saveChecklistCancelBtn" class="btn btn-secondary">Cancel</button>
+          <button id="saveChecklistBtn" class="btn btn-primary-sm">Save &amp; Close Selected</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Session list -->
+    <div id="sessionList" class="session-list"></div>
+    <p id="emptyMsg" class="empty-msg">No saved sessions</p>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal-overlay hidden">
+    <div class="modal-dialog">
+      <p id="modalTitle" class="modal-title"></p>
+      <p id="modalName" class="modal-name"></p>
+      <div class="modal-actions">
+        <button id="modalCancelBtn" class="btn btn-secondary">Cancel</button>
+        <button id="modalConfirmBtn" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

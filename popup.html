@@ -15,26 +15,26 @@
     </div>
 
     <!-- Global buttons -->
-    <button id="closeAllBtn" class="btn btn-danger-full">
-      <span class="material-symbols-outlined">power_settings_new</span>
+    <button id="closeAllBtn" class="btn btn-danger-full" aria-label="Close all tabs in current window">
+      <span class="material-symbols-outlined" aria-hidden="true">power_settings_new</span>
       Close All Tabs
     </button>
 
-    <button id="saveBtn" class="btn btn-primary">
-      <span class="material-symbols-outlined">save</span>
+    <button id="saveBtn" class="btn btn-primary" aria-label="Save current tabs as a session">
+      <span class="material-symbols-outlined" aria-hidden="true">save</span>
       Save Session
     </button>
 
     <!-- Inline save flow -->
-    <div id="saveFlow" class="hidden">
+    <div id="saveFlow" class="hidden" role="dialog" aria-label="Save session dialog">
       <div id="saveNameStep">
-        <input id="saveNameInput" class="input" type="text" placeholder="Session name (optional)" maxlength="50" autocomplete="off">
+        <input id="saveNameInput" class="input" type="text" placeholder="Session name (optional)" maxlength="50" autocomplete="off" aria-label="Session name">
         <div class="save-name-actions">
           <button id="saveNameCancelBtn" class="btn btn-secondary">Cancel</button>
           <button id="saveNameConfirmBtn" class="btn btn-primary-sm">Save</button>
         </div>
       </div>
-      <div id="saveChecklistStep" class="hidden">
+      <div id="saveChecklistStep" class="hidden" role="group" aria-label="Select tabs to save">
         <div id="tabChecklist" class="checklist"></div>
         <div class="save-checklist-actions">
           <button id="saveChecklistCancelBtn" class="btn btn-secondary">Cancel</button>
@@ -46,15 +46,15 @@
     <div class="divider"></div>
 
     <!-- Session list -->
-    <div id="sessionList" class="session-list"></div>
-    <p id="emptyMsg" class="empty-msg">No saved sessions</p>
+    <div id="sessionList" class="session-list" role="list" aria-label="Saved sessions"></div>
+    <p id="emptyMsg" class="empty-msg" aria-live="polite">No saved sessions</p>
   </div>
 
   <!-- Toast -->
-  <div id="toast" class="toast hidden"></div>
+  <div id="toast" class="toast hidden" role="alert" aria-live="assertive"></div>
 
   <!-- Modal -->
-  <div id="modal" class="modal-overlay hidden">
+  <div id="modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-dialog">
       <p id="modalTitle" class="modal-title"></p>
       <p id="modalName" class="modal-name"></p>

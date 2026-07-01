@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 [![Manifest](https://img.shields.io/badge/manifest-v3-green?style=flat-square)](manifest.json)
 [![Browser](https://img.shields.io/badge/browser-Chrome%20%7C%20Opera-orange?style=flat-square)]()
-[![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-1.2-brightgreen?style=flat-square)]()
 
 *Built for people who live with too many tabs open.*
 
@@ -37,9 +37,12 @@ NesTAb fixes that. Save your tabs into named sessions, close them guilt-free, an
 | 💾 | **Save sessions** | Save all or selected tabs into a named session |
 | ✅ | **Selective saving** | Pick exactly which tabs to save before closing |
 | ↗️ | **Restore sessions** | Reopen every tab from a saved session instantly |
-| ✏️ | **Edit sessions** | Rename or remove individual tabs from any session |
+| ✏️ | **Edit sessions** | Rename, remove, or add new tabs to any session |
+| ➕ | **Add tabs in edit** | Add currently open tabs to an existing session while editing |
 | ✕ | **Close matching tabs** | Close open tabs that belong to a saved session |
 | ⚡ | **Close all tabs** | Clear the window, open a fresh tab, see RAM freed |
+| 📥 | **Import sessions** | Restore sessions from a JSON backup file |
+| 📤 | **Export sessions** | Backup all sessions as a JSON file |
 | 🛡️ | **Safe deletions** | Every destructive action asks for confirmation |
 | 💽 | **Persistent storage** | Sessions survive popup close and browser restarts |
 

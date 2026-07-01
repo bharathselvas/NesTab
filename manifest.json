@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "NesTAb",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Save, manage and restore your browser tab sessions",
   "icons": {
     "16": "icons/icon16.png",
